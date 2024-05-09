@@ -1,0 +1,91 @@
+# Exclude a variety of commonly ignored directories.
+# excludeを設定するとデフォルトで設定されている.venv配下などの設定が上書きされるため要注意
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".git-rewrite",
+    ".hg",
+    ".ipynb_checkpoints",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pyenv",
+    ".pytest_cache",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    ".vscode",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "site-packages",
+    "venv",
+]
+
+# Same as Black.
+line-length = 120
+indent-width = 4
+
+# Assume Python 3.12
+target-version = "py311"
+
+src = ["src", "test"]
+
+[lint]
+# Enable Pyflakes (`F`) and a subset of the pycodestyle (`E`)  codes by default.
+# https://docs.astral.sh/ruff/rules/　に記載されているルールのうち、Codeが前方一致するルールが適用されます
+select = ["ALL"]
+# select = ["E", "F", "I", "W", "NPY", "PD", "UP", "D", "PLR"] # "ALL"
+
+# selectで選択したルールから除外したいものを指定できます
+ignore = [
+    "COM812",
+    "COM819",
+    "D100",
+    "D203",
+    "D213",
+    "D300",
+    "E111",
+    "E114",
+    "E117",
+    "ISC001",
+    "ISC002",
+    "Q000",
+    "Q001",
+    "Q002",
+    "Q003",
+    "W191",
+    "PLR2004",
+]
+
+# Allow fix for all enabled rules (when `--fix`) is provided.
+# auto fixの対象にするルール
+fixable = ["ALL"]
+# auto fixから除外するルール
+# editor.formatOnSaveを使う際に自動でFixされると困るものを指定できます
+unfixable = ["F401"]
+
+# Allow unused variables when underscore-prefixed.
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+
+[format]
+# Like Black, use double quotes for strings.
+# 文字列をダブルクォートに統一
+quote-style = "double"
+
+# Like Black, indent with spaces, rather than tabs.
+# インデントをタブ文字(\t)からスペースに変換
+indent-style = "space"
+
+# Like Black, respect magic trailing commas.
+skip-magic-trailing-comma = false
+
+# Like Black, automatically detect the appropriate line ending.
+line-ending = "auto"
