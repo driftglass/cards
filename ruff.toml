@@ -36,7 +36,7 @@ indent-width = 4
 # Assume Python 3.12
 target-version = "py311"
 
-src = ["src", "test"]
+src = ["src", "tests"]
 
 [lint]
 # Enable Pyflakes (`F`) and a subset of the pycodestyle (`E`)  codes by default.
