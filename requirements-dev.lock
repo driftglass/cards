@@ -6,6 +6,7 @@
 #   features: []
 #   all-features: false
 #   with-sources: false
+#   generate-hashes: false
 
 -e file:.
 cachetools==5.3.3
@@ -16,7 +17,7 @@ click==8.1.7
     # via typer
 colorama==0.4.6
     # via tox
-coverage==7.5.1
+coverage==7.5.3
     # via pytest-cov
 distlib==0.3.8
     # via virtualenv
@@ -36,7 +37,7 @@ packaging==24.0
     # via pyproject-api
     # via pytest
     # via tox
-platformdirs==4.2.1
+platformdirs==4.2.2
     # via tox
     # via virtualenv
 pluggy==1.5.0
@@ -46,19 +47,19 @@ pygments==2.18.0
     # via rich
 pyproject-api==1.6.1
     # via tox
-pytest==8.2.0
+pytest==8.2.1
     # via pytest-cov
 pytest-cov==5.0.0
 rich==13.6.0
     # via cards
-ruff==0.4.3
+ruff==0.4.7
 tinydb==4.8.0
     # via cards
 tox==4.15.0
 typer==0.9.0
     # via cards
-typing-extensions==4.11.0
+typing-extensions==4.12.0
     # via mypy
     # via typer
-virtualenv==20.26.1
+virtualenv==20.26.2
     # via tox

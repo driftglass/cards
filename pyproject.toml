@@ -22,9 +22,9 @@ dev-dependencies = [
     "pytest",
     "tox",
     "coverage",
-    "pytest-cov",
+    "pytest-cov>=5.0.0",
     "ruff",
-    "mypy"
+    "mypy",
 ]
 
 [project.urls]
